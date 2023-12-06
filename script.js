@@ -15,10 +15,12 @@ if(minutes<10){
 if(seconds<10){
     seconds="0"+seconds;
 }
+
+var color = "#"+hours+minutes+seconds;
 console.log(hours+":"+minutes+":"+seconds);
-
+document.querySelector("body").style["background-color"]= color;
+document.getElementById("text").innerHTML = color;
 setTimeout(refresh, x*1000);
-
 }
 refresh();
 
