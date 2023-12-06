@@ -1,3 +1,5 @@
+function refresh(){
+var x = 1;
 var now = new Date();
 var hours = now.getHours();
 var minutes = now.getMinutes();
@@ -14,4 +16,10 @@ if(seconds<10){
     seconds="0"+seconds;
 }
 console.log(hours+":"+minutes+":"+seconds);
+
+setTimeout(refresh, x*1000);
+
+}
+refresh();
+
 
